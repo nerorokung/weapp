@@ -15,19 +15,13 @@
 <body oncontextmenu="return false;"> <div id="app-container"></div>
 
     <script>
-        // ฟังก์ชันถอดรหัสและสร้าง Iframe
         (function() {
-            // นี่คือ URL ของคุณที่ถูกแปลงเป็นรหัส Base64 แล้ว
             var encryptedUrl = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3Wm9PUXVlSlg3X0ZETHRKZ1JxdVZlSl9fT1R5YmM1a2IzZHVfV1NPQnV5YjIxVjN3X01fZ0I4cTNiVEI3eFg3dGs3dy9leGVj";
-            
             var container = document.getElementById('app-container');
             var iframe = document.createElement('iframe');
-            
-            // ถอดรหัส Base64 กลับมาเป็น URL ปกติ (atob)
             iframe.src = atob(encryptedUrl);
             iframe.scrolling = "yes";
             iframe.frameBorder = "0";
-            
             container.appendChild(iframe);
         })();
     </script>
